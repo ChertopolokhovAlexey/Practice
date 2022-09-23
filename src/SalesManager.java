@@ -14,4 +14,19 @@ public class SalesManager {
         }
         return max;
     }
+
+    public int statAverage() {
+        int statAverage = 0;
+        int min = max();
+        int total = 0;
+        for (int sale : sales) {
+            total += sale;
+            if (sale < min) {
+                min = sale;
+            }
+        }
+        statAverage = (total - min - max()) / (sales.length - 2);
+        return statAverage;
+    }
+
 }
