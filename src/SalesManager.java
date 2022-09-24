@@ -15,11 +15,11 @@ public class SalesManager {
         return max;
     }
 
-    public int statAverage() {
-        int statAverage = 0;
-        int min = max();
+    public long statAverage() {
+        long statAverage = 0;
+        long min = max();
         int total = 0;
-        for (int sale : sales) {
+        for (long sale : sales) {
             total += sale;
             if (sale < min) {
                 min = sale;
